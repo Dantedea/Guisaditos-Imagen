@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador de Paquetes para Eventos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos generales del cuerpo de la página, usando la fuente Helvetica Neue */
+    body {
+      font-family: "Helvetica Neue LT Com Roman", sans-serif;
+    }
+    /* Estilos para títulos (h1, h3) usando la fuente Helvetica Inserat */
+    h1, h3 {
+      font-family: "Helvetica Inserat LT Std Roman", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+  <header class="bg-[#e0782f] text-white text-center py-6 w-full shadow-md rounded-b-lg">
+    <h1 class="text-3xl font-bold">¡Cotiza tu Evento!</h1>
+  </header>
+  <section class="paquetes flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 mt-8 w-full max-w-6xl px-4">
+    <div class="paquete relative p-6 w-full md:w-5/12 lg:w-1/4 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+         style="background-image: url('https://github.com/Dantedea/Cotizacion-de-eventos/blob/main/WhatsApp%20Image%202024-06-11%20at%2010.55.59%20AM.jpeg?raw=true'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-white bg-opacity-80 rounded-xl"></div>
+      <div class="relative z-10">
+        <h3 class="text-2xl font-semibold text-[#e0782f] mb-4 text-center">30 Personas - <span class="text-3xl font-bold text-[#000000]">$3,450</span></h3>
+        <ul class="list-none text-gray-700 space-y-2 text-center">
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">4 guisados de tu preferencia</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Arroz</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Salsas caseras, limones y tortillas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Desechables y servilletas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">2 horas de servicio</span></li>
+        </ul>
+        <button onclick="abrirCotizador(30, 3450, 4, 115, 30, 49)" class="mt-6 w-full py-3 bg-[#a7a951] text-white font-bold rounded-lg shadow-md hover:bg-[#875639] transition-colors duration-300 transform hover:scale-105">Cotizar</button>
+      </div>
+    </div>
+    <div class="paquete relative p-6 w-full md:w-5/12 lg:w-1/4 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+         style="background-image: url('https://github.com/Dantedea/Cotizacion-de-eventos/blob/main/DSC_1227_RETOQUE.jpg?raw=true'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-white bg-opacity-80 rounded-xl"></div>
+      <div class="relative z-10">
+        <h3 class="text-2xl font-semibold text-[#e0782f] mb-4 text-center">50 Personas - <span class="text-3xl font-bold text-[#000000]">$5,500</span></h3>
+        <ul class="list-none text-gray-700 space-y-2 text-center">
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">5 guisados de tu preferencia</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Arroz</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Salsas caseras, limones y tortillas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Desechables y servilletas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">2 horas de servicio</span></li>
+        </ul>
+        <button onclick="abrirCotizador(50, 5500, 5, 110, 50, 99)" class="mt-6 w-full py-3 bg-[#a7a951] text-white font-bold rounded-lg shadow-md hover:bg-[#875639] transition-colors duration-300 transform hover:scale-105">Cotizar</button>
+      </div>
+    </div>
+    <div class="paquete relative p-6 w-full md:w-5/12 lg:w-1/4 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+         style="background-image: url('https://github.com/Dantedea/Cotizacion-de-eventos/blob/main/WhatsApp%20Image%202024-06-11%20at%2010.53.27%20AM.jpeg?raw=true'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-white bg-opacity-80 rounded-xl"></div>
+      <div class="relative z-10">
+        <h3 class="text-2xl font-semibold text-[#e0782f] mb-4 text-center">100 Personas - <span class="text-3xl font-bold text-[#000000]">$10,500</span></h3>
+        <ul class="list-none text-gray-700 space-y-2 text-center">
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">6 guisados de tu preferencia</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Arroz</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Salsas caseras, limones y tortillas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">Desechables y servilletas</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">2 horas de servicio</span></li>
+          <li class="flex items-center justify-center"><span class="mr-2">✅</span><span class="font-bold">2 aguas de 20 litros</span></li>
+        </ul>
+        <button onclick="abrirCotizador(100, 10500, 6, 105, 100, 150)" class="mt-6 w-full py-3 bg-[#a7a951] text-white font-bold rounded-lg shadow-md hover:bg-[#875639] transition-colors duration-300 transform hover:scale-105">Cotizar</button>
+      </div>
+    </div>
+  </section>
+  <div class="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 z-50 hidden" id="modal">
+    <div class="modal-content bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative">
+      <span class="close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold cursor-pointer" onclick="cerrarModal()">&times;</span>
+      <div id="formulario"></div>
+    </div>
+  </div>
+  <script>
+    // Lista de guisados disponibles
+    const guisados = [
+      "🐷 Pipián Rojo de Cerdo", "🌶Mole Poblano", "🐷 Chicharrón a la mexicana",
+      "🥔 Papas con Rajas", "🍗 Pollo en Salsa de Habanero", "🌭 Salchichas en Crema de Chipotle",
+      "🥚 Huevo Duro", "🍗 Milanesa de Pollo", "🥓 Rollos de Jamón", "🍗 Pipián verde de pollo",
+      "🐷 Chicharrón en salsa verde", "🥔 Papas con longaniza", "🔥 Cochinita pibil",
+      "🫑 Rajas poblanas a la mexicana", "🍗 Pipián rojo de pollo", "🐷 Chicharrón prensado",
+      "🌶 Chile verde de puerco", "🌭 Salchichas a la mexicana", "🌽 Rajas poblanas con elote",
+      "🌶 Tinga de pollo", "🥩 Carne molida con nopales en pasilla", "🌱 Soya al Pastor",
+      "🐷 Pipián verde de Cerdo", "🌶 Chiles rellenos", "🍗 Pollo en crema de champiñón",
+      "🔥 Longaniza con nopales", "🥩 Bistec con papas", "🥄 Picadillo", "👅 Lengua en salsa verde",
+      "🥣 Albóndigas en salsa verde", "🍗 Pollo en crema de chipotle", "🔥 Longaniza en salsa roja",
+      "🥔 Papas a la mexicana", "🐷 Patitas de Puercos Capeadas", "🔥 Hígado encebollado",
+      "🐷 Alambre de cerdo", "🐷 Chuleta al pastor y en crema de chipotle"
+    ];
+
+    // Lista de aguas naturales disponibles
+    const aguasNaturales = [
+      "🍹 Tamarindo", "🌺 Jamaica", "🥭 Maracuyá", "🍋 Limón con Chía",
+      "🍈 Guanábana", "🥭 Mango"
+    ];
+
+    /**
+     * Abre el modal de cotización y genera el formulario dinámicamente.
+     * @param {number} basePersonas - Número base de personas para el paquete.
+     * @param {number} baseCosto - Costo base del paquete.
+     * @param {number} maxGuisados - Número máximo de guisados a seleccionar.
+     * @param {number} costoExtra - Costo por persona extra.
+     * @param {number} minPersonas - Mínimo de personas permitidas.
+     * @param {number} maxPersonas - Máximo de personas permitidas.
+     */
+    function abrirCotizador(basePersonas, baseCosto, maxGuisados, costoExtra, minPersonas, maxPersonas) {
+      let html = `
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Arma tu Cotización</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <label class="block">
+            <span class="text-gray-700">Nombre:</span>
+            <input type="text" id="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block">
+            <span class="text-gray-700">Apellidos:</span>
+            <input type="text" id="apellidos" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block">
+            <span class="text-gray-700">Correo:</span>
+            <input type="email" id="correo" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block">
+            <span class="text-gray-700">Número móvil:</span>
+            <input type="tel" id="movil" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block">
+            <span class="text-gray-700">Día del evento:</span>
+            <input type="date" id="fecha" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block">
+            <span class="text-gray-700">Horario del evento:</span>
+            <input type="time" id="hora" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block md:col-span-2">
+            <span class="text-gray-700">Dirección:</span>
+            <input type="text" id="direccion" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+          <label class="block md:col-span-2">
+            <span class="text-gray-700">Ubicación (URL opcional):</span>
+            <input type="url" id="ubicacion" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2">
+          </label>
+        </div>
+        <p class="text-lg font-semibold text-gray-800 mb-3"><strong>Selecciona hasta ${maxGuisados} guisados:</strong></p>
+        <div id="listaGuisados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-6">`;
+      // Genera las opciones de guisados
+      guisados.forEach((g) => {
+        html += `<label class="inline-flex items-center text-gray-700"><input type="checkbox" class="form-checkbox guisado text-[#a7a951] rounded focus:ring-[#a7a951]" value="${g}" onchange="limitarSeleccion(${maxGuisados})"> <span class="ml-2">${g}</span></label>`;
+      });
+      html += `</div>
+        <p class="text-lg font-semibold text-gray-800 mb-3"><strong>Selecciona aguas naturales ($450 c/u):</strong></p>
+        <div id="listaAguas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-6">`;
+      // Genera las opciones de aguas naturales
+      aguasNaturales.forEach((agua) => {
+        html += `<label class="inline-flex items-center text-gray-700"><input type="checkbox" class="form-checkbox agua text-[#a7a951] rounded focus:ring-[#a7a951]" value="${agua}" onchange="calcularTotal(${baseCosto}, ${basePersonas}, ${costoExtra})"> <span class="ml-2">${agua}</span></label>`;
+      });
+      html += `</div>
+        <p class="text-lg font-semibold text-gray-800 mb-3"><strong>Selecciona la cantidad de personas (mín ${minPersonas}, máx ${maxPersonas}):</strong></p>
+        <input type="number" id="personas" value="${basePersonas}" min="${minPersonas}" max="${maxPersonas}" onchange="calcularTotal(${baseCosto}, ${basePersonas}, ${costoExtra})" class="mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm focus:border-[#e0782f] focus:ring focus:ring-[#e0782f] focus:ring-opacity-50 p-2 mb-6">
+        <p class="text-2xl font-bold text-[#000000] mb-6">Total: $<span id="total">${baseCosto}</span></p>
+        <button onclick="enviarCotizacion()" class="w-full py-3 bg-[#a7a951] text-white font-bold rounded-lg shadow-md hover:bg-[#875639] transition-colors duration-300 transform hover:scale-105">Enviar Cotización</button>
+        <p class="success text-[#a7a951] mt-4 text-center font-semibold" id="mensajeExito"></p>
+        <p class="text-[#d0302a] mt-4 text-center font-semibold" id="errorMessage"></p>
+      `;
+      // Inserta el HTML generado en el formulario y muestra el modal
+      document.getElementById('formulario').innerHTML = html;
+      document.getElementById('modal').classList.remove('hidden'); // Usa la clase 'hidden' de Tailwind
+      document.getElementById('modal').classList.add('flex');
+    }
+
+    /**
+     * Limita la selección de checkboxes de guisados al número máximo permitido.
+     * @param {number} max - Número máximo de guisados que se pueden seleccionar.
+     */
+    function limitarSeleccion(max) {
+      const seleccionados = document.querySelectorAll('.guisado:checked');
+      const checkboxes = document.querySelectorAll('.guisado');
+      // Habilita todos los checkboxes primero
+      checkboxes.forEach(cb => cb.disabled = false);
+      // Si se ha alcanzado el límite, deshabilita los checkboxes no seleccionados
+      if (seleccionados.length >= max) {
+        checkboxes.forEach(cb => {
+          if (!cb.checked) cb.disabled = true;
+        });
+      }
+    }
+
+    /**
+     * Calcula el costo total de la cotización.
+     * @param {number} baseCosto - Costo base del paquete.
+     * @param {number} basePersonas - Número base de personas para el paquete.
+     * @param {number} costoExtra - Costo por persona extra.
+     */
+    function calcularTotal(baseCosto, basePersonas, costoExtra) {
+      const cantidad = parseInt(document.getElementById('personas').value);
+      const extras = cantidad - basePersonas;
+      let total = baseCosto + (extras > 0 ? extras * costoExtra : 0); // Calcula el costo por personas extra
+      const aguasSeleccionadas = document.querySelectorAll('.agua:checked').length;
+      total += aguasSeleccionadas * 450; // Añade el costo de las aguas seleccionadas
+      document.getElementById('total').textContent = total; // Actualiza el total en la interfaz
+    }
+
+    /**
+     * Envía la cotización (actualmente solo valida campos y muestra un mensaje de éxito).
+     */
+    function enviarCotizacion() {
+      const campos = ['nombre', 'apellidos', 'correo', 'movil', 'fecha', 'hora', 'direccion'];
+      const errorMessage = document.getElementById('errorMessage');
+      // Valida que todos los campos requeridos estén llenos
+      for (const id of campos) {
+        if (!document.getElementById(id).value) {
+          errorMessage.textContent = 'Por favor completa todos los campos.';
+          document.getElementById('mensajeExito').textContent = ''; // Limpia el mensaje de éxito
+          return;
+        }
+      }
+      // Si todos los campos están llenos, muestra el mensaje de éxito y limpia cualquier mensaje de error
+      document.getElementById('mensajeExito').textContent = '🎉 ¡Cotización enviada correctamente!';
+      errorMessage.textContent = ''; // Limpia el mensaje de error si existe
+    }
+
+    /**
+     * Cierra el modal de cotización.
+     */
+    function cerrarModal() {
+      document.getElementById('modal').classList.remove('flex');
+      document.getElementById('modal').classList.add('hidden');
+      // Limpia el mensaje de éxito y cualquier mensaje de error al cerrar el modal
+      document.getElementById('mensajeExito').textContent = '';
+      const errorMessage = document.getElementById('errorMessage');
+      if (errorMessage) {
+        errorMessage.textContent = '';
+      }
+    }
+  </script>
+</body>
+</html>
